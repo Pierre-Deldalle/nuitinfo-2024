@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "araboto";
+    src: url("../font/araboto.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "araboto";
+    margin: auto;
+    text-align: center;
+    font-size: 150%;
+}
+
+header {
+    background-color: #090d1e;
+    color: white;
+    position: relative;
+    font-size: 200%;
+    padding: 5px;
+}
+
+img {
+    width: 45%;
+    margin-right: 10px;/
+}
+
+nav {
+    background-color: #090d1e;
+    color: white;
+    font-size: 200%;
+    padding-top: 0px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+nav li {
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color : #61b3e3;
+}
+
+article img {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 768px;
+}
+
+.image_degrade {
+    position: relative;
+}
+
+.image_corps {
+    position: relative;
+}
+
+.coeur {
+    position: absolute;
+    top: 34%;
+    left: 52%;
+    width: 13%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.poumons {
+    position: absolute;
+    top: 30%;
+    left: 34%;
+    width: 33%;
+    z-index: 2;
+    opacity: 95%;
+}
+
+.colonne {
+    position: absolute;
+    top: 20.8%;
+    left: 41.7%;
+    width: 18%;
+    z-index: 1;
+    opacity: 70%;
+}
+
+.reins {
+    position: absolute;
+    top: 72%;
+    left: 36%;
+    width: 29%;
+    z-index: 3;
+}
+
+.estomac {
+    position: absolute;
+    top: 59%;
+    left: 38%;
+    width: 25%;
+    z-index: 1;
+    opacity: 95%;
+}
+
+.algue {
+    position: absolute;
+    top: 76.5%;
+    left: 19%;
+    width: 20%;
+    z-index: 1;
+}
+
+.algue2 {
+    position: absolute;
+    top: 76.5%;
+    left: 55%;
+    width: 20%;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.poisson_easter {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    z-index: 1;
+    opacity: 0;
+    animation: moveFishEaster 6s linear infinite;
+    width: 100px;
+}
+
+.poisson {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    z-index: 1;
+    opacity: 0;
+    animation: moveFish 4s linear infinite;
+    width: 50px;
+}
+
+.poisson-1 {
+    top: 20%; /* Hauteur pour le premier poisson */
+    animation-delay: 0s; /* Premier poisson apparaît immédiatement */
+}
+
+.poisson-2 {
+    top: 40%; /* Hauteur pour le deuxième poisson */
+    animation-delay: 1s; /* Délai pour que le deuxième poisson apparaisse après le premier */
+}
+
+.poisson-3 {
+    top: 60%; /* Hauteur pour le troisième poisson */
+    animation-delay: 2s; /* Délai pour que le troisième poisson apparaisse après les autres */
+}
+
+.poisson-4 {
+    top: 70%; /* Hauteur pour le troisième poisson */
+    animation-delay: 2s; /* Délai pour que le troisième poisson apparaisse après les autres */
+}
+
+.etoile {
+    position: absolute;
+    top: 87%;
+    left: 83%;
+    width: 8%;
+    z-index: 1;
+}
+
+/* Animation des poissons */
+@keyframes moveFish {
+    0% {
+        left: -60px; /* Les poissons commencent à gauche hors de l'écran */
+        opacity: 0; /* Invisibles */
+    }
+    30% {
+        left: 20%; /* Les poissons deviennent visibles à 20% du déplacement */
+        opacity: 1; /* Ils deviennent visibles */
+    }
+    60% {
+        left: 50%; /* Les poissons sont visibles au centre de l'image */
+        opacity: 1; /* Ils restent visibles */
+    }
+    100% {
+        left: 100%; /* Les poissons sortent à droite */
+        opacity: 0; /* Ils deviennent invisibles lorsqu'ils sortent de l'écran */
+    }
+}@keyframes moveFishEaster {
+    0% {
+        left: -60px; /* Les poissons commencent à gauche hors de l'écran */
+        opacity: 0; /* Invisibles */
+    }
+    30% {
+        left: 20%; /* Les poissons deviennent visibles à 20% du déplacement */
+        opacity: 1; /* Ils deviennent visibles */
+    }
+    60% {
+        left: 50%; /* Les poissons sont visibles au centre de l'image */
+        opacity: 1; /* Ils restent visibles */
+    }
+    100% {
+        left: 100%; /* Les poissons sortent à droite */
+        opacity: 0; /* Ils deviennent invisibles lorsqu'ils sortent de l'écran */
+    }
+}
+
+footer {
+    background-color: #090d1e;
+    color: white;
+    padding: 15px;
+    font-size: 50%;
+    margin-top: -7px;
+}
+
+footer a:hover {
+    transition: none;
+    color: #61b3e3;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

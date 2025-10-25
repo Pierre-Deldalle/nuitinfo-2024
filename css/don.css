@@ -1,0 +1,104 @@
+@font-face {
+    font-family: flower;
+    src: url("../font/flower.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .menu {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin: 0 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Footer styles */
+  .footer {
+    text-align: center;
+    background-color: red;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+body{
+    background-color: blueviolet;
+    font-family: "flower";
+}
+
+.form-container {
+    width: 40%;
+    margin: 60px auto;
+    padding: 80px;
+    background-color: #fff;
+    color: #3F1A59;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  

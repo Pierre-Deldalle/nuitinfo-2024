@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Nuit de l'Info</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="https://www.raceforwater.org/fr/"><img src="img/race_for_water.png" alt="logo_rfw"></a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="">Accueil</a></li>
+            <li><a href="don.html">Faire un don</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <div>
+            <h2>Bienvenue sur le site !</h2>
+            <p>Sur ce site en partenariat avec la fondation Race for Water, vous allez pouvoir interagir avec une simulation qui représente les parallèles entre les systèmes humains et les systèmes océaniques. Vous pourrez explorer comment chaque partie du corps humain trouve un écho dans les mécanismes de l'océan. Cette simulation illustre les bénéfices d'un bon fonctionnement comme les conséquences des dysfonctionnements.</p>
+            <video id="background-video" autoplay loop muted>
+                
+            <source src="video/ocean.mp4" type="video/mp4">
+    
+            </video>
+
+            <h3>Interview de Florian Sévellec :</h3>
+            <h5>Responsable du laboratoire d'océanographie physique et spatiale (LOPS)</h5>
+            <h5>Équipe "Océan et Climat</h5>
+
+            <div class="audio-player">
+                <button id="play-pause-btn">Démarrer</button>
+                <button id="restart-btn">Redémarrer</button>
+                <span id="status">En pause</span>
+              </div>
+            
+              <audio id="audio">
+                <source src="sound/podcast.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+            
+              <script>
+                const audio = document.getElementById('audio');
+                const playPauseBtn = document.getElementById('play-pause-btn');
+                const restartBtn = document.getElementById('restart-btn');
+                const status = document.getElementById('status');
+            
+                // Lecture / Pause
+                playPauseBtn.addEventListener('click', () => {
+                  if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.textContent = 'Pause';
+                    status.textContent = 'En route';
+                  } else {
+                    audio.pause();
+                    playPauseBtn.textContent = 'Reprendre';
+                    status.textContent = 'En pause';
+                  }
+                });
+            
+                // Revenir au début
+                restartBtn.addEventListener('click', () => {
+                  audio.currentTime = 0; // Revient au début
+                  if (!audio.paused) {
+                    audio.play(); // Rejoue le son si en cours de lecture
+                  }
+                  status.textContent = 'Redémarré';
+                });
+              </script>
+
+            <a href="simulation.html" target="_blank">
+                <button class="sim">Simulation</button>
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <p>
+                © 2024 • 
+                <a href="https://www.raceforwater.org/fr/mentions-legales/">Mentions légales</a>
+                • 
+                <a href="https://www.raceforwater.org/fr/politique-de-confidentialite/">Politique de confidentialité</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

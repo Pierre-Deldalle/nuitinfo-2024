@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "araboto";
+  src: url("../font/araboto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style général */
+body {
+  font-family: "araboto";
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  background-color: black; 
+  color: white; 
+  margin: 0; 
+  padding: 20px; 
+  text-align: center; 
+  width: 100vw; 
+  box-sizing: border-box; 
+}
+
+footer{
+  background-color: black;
+  color: white; 
+  margin: 0; 
+  padding: 20px; 
+  text-align: center; 
+  width: 100vw; 
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: #61b3e3;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease; 
+}
+
+/* Style du bouton de clic */
+#boutonClic {
+  background-color: blue;
+  border: none;
+  border-radius: 50%;
+  width: 70vw; /* Largeur de 70% de la fenêtre */
+  height: 70vw; /* Hauteur égale pour garder le bouton rond */
+  max-width: 500px; /* Limite maximale pour éviter qu'il devienne trop grand */
+  max-height: 500px; /* Limite maximale */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  margin: 20px auto; /* Centre horizontalement avec un espacement */
+}
+
+#boutonClic:hover {
+  transform: scale(1.05);
+}
+
+#boutonClic img {
+  width: 60%; /* Image adaptée à la taille du bouton */
+  height: auto;
+}
+
+.textescore {
+  font-weight: bold;
+}
+
+.textecote{
+  font-style: italic;
+}
+
+/* Texte du compteur */
+p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Bouton pour désactiver */
+#desactiver {
+  background-color: #ff4d4d;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#desactiver:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+#containerPlusUn {
+  position: relative; /* Pour positionner les "+1" dans le bouton */
+}
+
+.plusUn {
+  position: absolute;
+  color: black;
+  font-size: 1.7em;
+  font-weight: bold;
+  animation: fadeOut 1s ease forwards;
+  pointer-events: none; /* Pour éviter de perturber les clics */
+}
+
+/* Animation de disparition */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); /* Monte le "+1" vers le haut */
+  }
+}
